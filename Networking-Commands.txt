@@ -1,0 +1,30 @@
+========================================================================
+
+1. Ping google.com - sending packets checking internet connectivity
+2. Netstat - active internet connections
+3. ifconfig - interface (Network interface card NIC - server connected device list)
+4. Traceroute - find the route for any server (ip)
+5. Tracepath - find the path for any server (path) - know your Network latency 
+6. mtr - combination of ping and tracepath
+7. nslookup - particuler ip given for server
+8. telnet - conncet with port number for server ip (telnet youtube.com 80)
+9. hostame - find ip fr hostname
+10. ip - find all ip address
+11. iwconfig - things of wireless
+12. ss - same as Netstat
+13. dig - where the server is hosted
+14. whois - all the deatils of any site hosted and server
+15. arp - address resolution protocol - MAC addredd finder
+16. ifplugstatus - check server's interface is working or Not
+
+========================================================================
+
+1. curl - use for API call
+2. jq - format API data
+3. wget - download any data from internet (wget url)
+4. watch - every 2 sec run that command (watch -n 5 - every 5 sec) - check status
+5. nmap - scan the website or server (nmap -v google.com)
+6. route - give the details for route table
+
+========================================================================
+
