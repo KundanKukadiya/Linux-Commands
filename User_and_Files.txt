@@ -1,0 +1,88 @@
+## System-level commands
+
+who - which user when login all details
+ID - users and group details
+sudo - super (root) user
+which - find the path for where is the installed package
+    which bash
+    which python
+    which git
+uname - username
+uptime - system uptime
+date - current date
+whoami - current working user name
+shutdown
+    sudo shutdown
+    sudo shutdown -c  -> cancel shutdown
+clear
+reboot
+        sudo reboot
+apt - package manager
+        sudo apt-get install docket.io
+        sudo apt-get update
+
+## User and Group management
+
+sudo useradd -m jethalal - add user
+sudo passwd jethalal - password change for user
+su jethalal - switch user
+cat /etc/passwd - check user details
+userdel jethalal  - delete user
+sudo useradd jethalal
+sudo useradd tapu
+sudo groupadd devops - add group
+cat /etc/group - check group details
+sudo groupadd Tester
+sudo gpasswd -a jethalal devops -> add user into the group
+   sudo gpasswd -a ubuntu devops
+
+sudo gpasswd -M tapu , ubuntu Tester -> add multiple users into the group once.
+
+sudo groupdel Tester -> delete group
+
+## File permission
+
+ex : drwxrwxr-x
+    d means -> directory
+    rwx - user
+    rwx - group
+    r-x - other user
+    r - read
+    w - write
+    x - execute
+
+value   permission
+  0         ---
+  1         --x
+  2         -w-     
+  3         -wx
+  4         r--
+  5         r-x
+  6         rw-
+  7         rwx
+
+chown - change the owner of File
+chmod - change the permission of the File
+umask - check the by default permission of created File
+chgrp - change the group of the File
+ls-l - check the permission of the File
+ls-la - permission of the all files
+
+
+zip - for zip files
+unzip - unpiz files
+tar -> compress the fie - tar -cvzf devops.tar.gz devops/
+-c -> compress , -v -> verbose or view , -z -> use gunzip , -f -> filename
+tar -> uncompress or extract file -> tar -xvzf devops.tar.gz
+-x -> extract the file
+
+scp - copy file local to remote
+
+-> local to remote
+ex : scp -i "Users/kundan/Downloads/Visualcode.pem" <File_name> ubuntu@ec2-18-220-48-248.us-east-2.compute.amazonaws.com:/home/ubuntu
+
+-> remote to local
+scp -i "Users/kundan/Downloads/Visualcode.pem" ubuntu@ec2-18-220-48-248.us-east-2.compute.amazonaws.com:/home/ubuntu/devops .(dot)
+
+-> rsync -> sync the files in both local and remote
+rsync -e "ssh -i Users/kundan/Downloads/Visualcode.pem" -avz <file/folder name> ubuntu@ec2-18-220-48-248.us-east-2.compute.amazonaws.com:/home/ubuntu/devops
